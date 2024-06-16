@@ -11,7 +11,6 @@ Follow these instructions to get started with your own Simple Home Library Manag
 
 **Clone the repository**:
 ```bash
-Copia codice
 git clone https://github.com/your-username/simple-home-library-manager.git
 cd simple-home-library-manager
 ```
