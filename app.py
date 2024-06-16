@@ -12,8 +12,8 @@ from utils import *
 
 # -- USER AUTHENTICATION --
 
-names = ["Claudio", "Pietro"]
-usernames = ["Claudio", "Pietro"]
+names = ["Claudio"]
+usernames = ["Claudio"]
 
 # load hashed passwords
 file_path = "hashed_pw.pkl"
@@ -21,7 +21,7 @@ with open(file_path, "rb") as file:
     hashed_passwords = pickle.load(file)
 
 authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
-    "biblioteca_domestica", "abcdef", cookie_expiry_days=30)
+    "biblioteca_domestica", "abcdef", cookie_expiry_days=0)
 
 name, authentication_status, username = authenticator.login("Login", "main")
 
@@ -33,7 +33,7 @@ if authentication_status == None:
     st.warning("Please enter your username and password")
 
 if authentication_status:
-    authenticator.logout(button_name="Logout", location="sidebar")
+    # authenticator.logout(button_name="Logout", location="sidebar")
     # Main function for the Streamlit app
     def main():
         st.title('Gestione della Biblioteca Domestica')
