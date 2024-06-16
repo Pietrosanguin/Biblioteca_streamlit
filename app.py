@@ -33,12 +33,12 @@ if authentication_status == None:
     st.warning("Please enter your username and password")
 
 if authentication_status:
-
+    authenticator.logout(button_name="Logout", location="sidebar")
     # Main function for the Streamlit app
     def main():
         st.title('Gestione della Biblioteca Domestica')
 
-        #authenticator.logout(button_name="Logout", location="sidebar")
+        
         st.sidebar.title(f"Benvenuto {name}")
         menu = ['Inserisci Nuovo Libro', 'Ricerca e Modifica Libri']
         choice = st.sidebar.selectbox('Menu', menu)
